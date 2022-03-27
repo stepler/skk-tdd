@@ -1,0 +1,3 @@
+export function range(a: number, b?: number, step?: number): number[] {
+    //...
+}

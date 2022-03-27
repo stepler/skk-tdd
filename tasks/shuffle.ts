@@ -1,0 +1,3 @@
+export function shuffle<T = any>(arr: T[]): T[] {
+    //...
+}
