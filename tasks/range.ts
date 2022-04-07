@@ -4,17 +4,13 @@ export function range(a: number, b?: number, step?: number): number[] {
         a = 0;
     }
     if (!step) {
-        step = b-a > 0
+        step = b > a
             ? 1
             : -1;
     }
 
-    const limit = step > 0
-        ? (num: number) => num < b
-        : (num: number) => num > b;
-
     const res: number[] = [];
-    for (let i = a; limit(i); i += step) {
+    for (let i = a; step > 0 ? i < b : i > b; i += step) {
         res.push(i);
     }
     
