@@ -1,17 +1,20 @@
 type ArrPred<T> = (x: T, index: number) => boolean;
 
 export function groupBy<T = any>(fns: ArrPred<T>[], arr: T[]): T[][] {
-    const workArr = Array.from(arr);
     fns.push(() => true);
-    
-    return fns.map(fn => {
-        const fnRes = [];
-        let idx = workArr.findIndex(fn);
-        while (idx !== -1) {
-            fnRes.push(workArr[idx]);
-            workArr.splice(idx, 1);
-            idx = workArr.findIndex(fn);
+
+    const res: T[][] = new Array(fns.length);
+    for (let j = 0; j < res.length; j++) {
+        res[j] = [];
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < res.length; j++) {
+            if (fns[j](arr[i], i)) {
+                res[j].push(arr[i]);
+                break;
+            }
         }
-        return fnRes;
-    });
+    }
+    return res;
 }
