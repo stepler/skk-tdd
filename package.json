@@ -1,12 +1,11 @@
 {
-    "name": "skk-tdd",
+    "name": "tasks-set",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
     "scripts": {
-        "test": "jest --roots ./tasks"
+        "test": "jest"
     },
-    "author": "",
+    "author": "stepler",
     "license": "ISC",
     "devDependencies": {
         "@babel/core": "7.17.7",
