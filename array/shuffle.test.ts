@@ -15,5 +15,5 @@ it('array/shuffle', () => {
         expect(res.some((val, idx) => arr[idx] !== val)).toBeTruthy();
 
         expect(arr.every((val) => res.includes(val))).toBeTruthy();
-    });
+    })
 });
