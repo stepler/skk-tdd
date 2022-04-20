@@ -16,11 +16,7 @@ export function groupBy<T = any>(fns: ArrPred<T>[], list: T[]): T[][] {
 
     for (let i = 0; i < list.length; i++) {
         for (let j = 0; j < res.length; j++) {
-            if (! fns[j]) {
-                res[j].push(list[i]);
-                break;
-            }
-            if (fns[j](list[i], i)) {
+            if (! fns[j] || fns[j](list[i], i)) {
                 res[j].push(list[i]);
                 break;
             }
