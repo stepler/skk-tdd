@@ -1,6 +1,6 @@
 import { range } from './range';
 
-describe('range', () => {
+describe('array/range', () => {
     it('base', () => {
         expect(range(4)).toEqual([0, 1, 2, 3]);
 

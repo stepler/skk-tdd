@@ -1,6 +1,6 @@
 import { swap } from './swap';
 
-describe('swap', () => {
+describe('array/swap', () => {
     it('base', () => {
         const arr = [1, 2, 3];
 

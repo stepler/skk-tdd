@@ -1,6 +1,6 @@
 import { move } from './move';
 
-describe('move', () => {
+describe('array/move', () => {
     it('base', () => {
         const arr = [1, 2, 3];
 
@@ -18,7 +18,7 @@ describe('move', () => {
     });
 
     it('improved', () => {
-        expect(move(0, -1, [1, 2, 3])).toEqual([3, 2, 1]);
+        expect(move(0, -1, [1, 2, 3])).toEqual([2, 3, 1]);
 
         expect(move(-1, 1, [1, 2, 3, 4, 5])).toEqual([1, 5, 2, 3, 4]);
 

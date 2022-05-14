@@ -1,6 +1,6 @@
 import { slice } from './slice';
 
-describe('slice', () => {
+describe('array/slice', () => {
     it('base', () => {
         const list = [1, 2, 3, 4, 5];
 
