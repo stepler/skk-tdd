@@ -3,6 +3,6 @@
  * in-place
  */
 
-export function move<T = any>(list: T[], a: number, b: number): T[] {
+export function move<T = any>(a: number, b: number, list: T[]): T[] {
     //...
 }

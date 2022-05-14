@@ -3,6 +3,6 @@
  * in-place
  */
 
-export function swap<T = any>(list: T[], a: number, b: number): T[] {
+export function swap<T = any>(a: number, b: number, list: T[]): T[] {
     //...
 }
