@@ -6,7 +6,8 @@ import { normalizeIndex } from './array-tools';
 
 export function slice<T = any>(from: number, to: number, list: T[]): T[] {
     from = normalizeIndex(from, list);
-    to = normalizeIndex(to, list);
+    to = normalizeIndex(to >= list.length ? list.length -1 : to, list);
+
     if (from < 0 || to < 0) {
         return [];
     }

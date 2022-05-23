@@ -1,6 +1,6 @@
 import { shuffle } from './shuffle';
 
-it('array/shuffle', () => {
+describe('array/shuffle', () => {
     it('test', () => {
         const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
