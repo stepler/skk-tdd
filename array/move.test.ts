@@ -4,7 +4,7 @@ describe('array/move', () => {
     it('base', () => {
         const arr = [1, 2, 3];
 
-        expect(move(arr, 0, 1)).toBe(arr);
+        expect(move(0, 1, arr)).toBe(arr);
 
         expect(move(4, 2, [1, 2, 3, 4, 5])).toEqual([1, 2, 5, 3, 4]);
 

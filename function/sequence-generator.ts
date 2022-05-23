@@ -6,5 +6,6 @@
 type GeneratorFn = () => number;
 
 export function sequenceGenerator(initial: number, step: number = 1): GeneratorFn {
-    //...
+    initial -= step;
+    return () => initial += step;
 }
