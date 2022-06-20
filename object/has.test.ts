@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { has } from './has';
 
 describe('object/has', () => {

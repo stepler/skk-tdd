@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { keys } from './keys';
 
 describe('object/keys', () => {

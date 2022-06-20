@@ -2,19 +2,19 @@ import { defaultTo } from './default-to';
 
 describe('logic/defaultTo', () => {
     it('should return first argument', () => {
-        expect(deaultTo('def', undefined)).toBe('def');
-        expect(deaultTo('def', null)).toBe('def');
-        expect(deaultTo('def', NaN)).toBe('def');
+        expect(defaultTo('def', undefined)).toBe('def');
+        expect(defaultTo('def', null)).toBe('def');
+        expect(defaultTo('def', NaN)).toBe('def');
 
-        expect(deaultTo(undefined, NaN)).toBeUndefined();
-        expect(deaultTo(null, NaN)).toBeNull();
-        expect(deaultTo(NaN, null)).toBeNaN();
+        expect(defaultTo(undefined, NaN)).toBeUndefined();
+        expect(defaultTo(null, NaN)).toBeNull();
+        expect(defaultTo(NaN, null)).toBeNaN();
     });
 
     it('should return second argument', () => {
-        expect(deaultTo('def', true)).toBe(true);
-        expect(deaultTo('def', false)).toBe(false);
-        expect(deaultTo('def', '')).toBe('');
-        expect(deaultTo('def', 0)).toBe(0);
+        expect(defaultTo('def', true)).toBe(true);
+        expect(defaultTo('def', false)).toBe(false);
+        expect(defaultTo('def', '')).toBe('');
+        expect(defaultTo('def', 0)).toBe(0);
     });
 });

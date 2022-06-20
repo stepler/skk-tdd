@@ -12,5 +12,15 @@ type Func<T1, T2, R> = (
 
 
 export function mergeWith(fn: Func<any, any, any>, ...sources: Record<any, any>[]): Record<any, any> {
-    //...
+    return sources.reduce((res, cur) => {
+        Object.keys(cur).forEach(key => {
+            if (res[key]) {
+                res[key] = fn(res[key], cur[key], key, res, cur);
+            } else {
+                res[key] = cur[key];
+            }
+        });
+        
+        return res;
+    }, {});
 }

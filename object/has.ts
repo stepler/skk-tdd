@@ -2,6 +2,12 @@
  * Проверяет наличие ключа в объекте
  */
 
-export function has(obj: Record<string, any>, prop: string): boolean {
-    //...
+import { isObject } from "../is/object"; 
+
+export function has(prop: string, obj: Record<string, any>): boolean {
+    if (!isObject(obj)) {
+        return false;
+    }
+
+    return obj.hasOwnProperty(prop);
 }

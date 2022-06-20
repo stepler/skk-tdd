@@ -4,6 +4,7 @@ describe('object/prop', () => {
     it('should return undefined on invalid object', () => {
         expect(prop('a', undefined)).toBeUndefined();
         expect(prop('a', null)).toBeUndefined();
+        // @ts-ignore
         expect(prop('a', 'str')).toBeUndefined();
     });
 
